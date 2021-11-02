@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.side-nav {
+  height: 100vh;
+  background-color: #f8f9fa;
+  overflow: auto;
+  width: 20%;
+}
+.main {
+  background-color: #f2f4f7;
+  width: 80%;
+  height: 100vh;
+  overflow: auto;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 3rem;
+  color: #20243d;
+  border-right: 1px solid rgb(221, 218, 218);
+}
+
+.side-nav > img {
+  width: 50px;
+}
+
+.side-header {
+  margin: 2rem auto;
+}
+
+.nav {
+  width: 200px;
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: small;
+  height: 60px;
+  border-radius: 12px;
+  padding-left: 2rem;
+  transition: 0.2s linear;
+  margin-top: 10px;
+}
+
+.item:hover {
+  background-color: #ffffff;
+  box-shadow: 10px 1px 31px 1px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 10px 1px 31px 1px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 10px 1px 31px 1px rgba(0, 0, 0, 0.14);
+}
+
+a {
+  text-decoration: none;
+  color: #1d2138;
+}
+
+.main {
+  padding: 5rem;
+  color: #1d2138;
+}
+
+.one {
+  height: 70px;
+  background-color: #ffffff;
+  box-shadow: 10px 1px 31px 1px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 10px 1px 31px 1px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 10px 1px 31px 1px rgba(0, 0, 0, 0.14);
+  width: 300px;
+  display: flex;
+  justify-content: center;
+
+  margin: 1rem;
+  border-radius: 15px;
+}
+
+.nav-link {
+  color: #1d2138;
+}
+
+.active {
+  background-color: #f0ecec;
+}
+
+.breadcrumb {
+  font-size: small;
+}
+
+.button-add {
+  margin-top: 15px;
+  background-color: #4a8507;
+  cursor: pointer;
+  padding: 5px 35px;
+  border-radius: 5px;
+  font-size: small;
+  color: floralwhite;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  padding: 5px;
+  font-size: small;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+input[type="text"],
+input[type="date"] {
+  border: none;
+  width: 70%;
+  padding: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.button-submit {
+  margin-top: 15px;
+  background-color: #4a8507;
+  cursor: pointer;
+  padding: 5px 35px;
+  border-radius: 5px;
+  font-size: larger;
+  color: floralwhite;
+}
