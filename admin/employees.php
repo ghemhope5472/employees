@@ -59,7 +59,8 @@
             <br> <br>
             <h2> Employee </h2>
             <br> 
-            <a href="add_employees.php" class='button-add'> Add Employee </a>
+            <a href="add_employees.php" class='button-add'> Add Employee </a>  | 
+            <a href="list_employees.php" class='button-add'> List of Employee </a>
         </div>
 
     </div>

@@ -121,25 +121,26 @@
                     <td style='text-align:center;font-weight:bold;background-color: #4a8507;color:floralwhite;' colspan="4">EMPLOYEE INFO</td>
                 </tr>
 
-                <form action="<?php htmlspecialchars('PHP_SELF'); ?>" method="POST">
+               
+                <form action="<?php htmlspecialchars('PHP_SELF'); ?>" method="POST" enctype="multipart/form-data">
                 <!--    FORM START -->
                 <tr>
                     <td colspan='5'>
-                        EIDN:  <input type="text" name="eid" >
+                        EIDN:  <input type="text" name="eid" required>
                     </td>
                 </tr>
                 <tr>
-                    <td>Date Hired: <input type="date" name="date_hired" > </td>
+                    <td>Date Hired: <input type="date" name="date_hired" required> </td>
                     <td> Department:  
-                        <select name="department" id="department" class="form-control">
+                        <select name="department" id="department" class="form-control" required>
                             <option value="HCAD">HCAD</option>
                             <option value="SOA">SOA</option>
                             <option value="COD">COD</option>
                         </select>
                     </td>
-                    <td> Position:  <input type="text" name="position" id="position" class="form-control"></td>
+                    <td> Position:  <input type="text" name="position" id="position" class="form-control" required></td>
                     <td> Employee Status: 
-                        <select name="status" id="status" class="form-control">
+                        <select name="status" id="status" class="form-control" required>
                             <option value="regular">Regular</option>
                             <option value="probationary">Probationary</option>
                         </select> 
@@ -151,7 +152,7 @@
                     <div class="photo-square" style="height: 300px;width: 300px;background-color: #1d2138;margin:0 auto;">
                         <img src=""  id="output"/ class="img-preview" height="300px" width="300px">
                     </div>
-                        <input type="file" name="file"  style="margin-top: 1rem;" onchange="loadFile(event)">
+                        <input type="file" name="img"  style="margin-top: 1rem;" onchange="loadFile(event)">
                     </td>
                     <td colspan='3' style='text-align:center;font-weight:bold;background-color: #4a8507;color:floralwhite;'>
                         PERSONAL INFORMATION
@@ -161,49 +162,49 @@
                 </tr>
                 <tr colspan="3">
                     <td> Family Name </td>
-                    <td colspan="2"> <input type="text" name="family_name" ></td>
+                    <td colspan="2"> <input type="text" name="family_name" required></td>
                 </tr>
                 <tr >
                     <td> First Name </td>
-                    <td colspan="2"> <input type="text" name="first_name" ></td>
+                    <td colspan="2"> <input type="text" name="first_name" required ></td>
                 </tr>
                 <tr >
                     <td> Middle Name </td>
-                    <td colspan="2"> <input type="text" name="middle_name" ></td>
+                    <td colspan="2"> <input type="text" name="middle_name" required ></td>
                 </tr>
                 <tr >
                     <td>Contact Number</td>
-                    <td colspan="2"> <input type="text" name="contact_number" ></td>
+                    <td colspan="2"> <input type="text" name="contact_number" required></td>
                 </tr>
                 <tr >
                     <td>Email Address</td>
-                    <td colspan="2"> <input type="text" name="email_address" ></td>
+                    <td colspan="2"> <input type="text" name="email_address" required></td>
                 </tr>
                 <tr >
                     <td> Birthday </td>
-                    <td colspan="2"> <input type="date" name="birthday" ></td>
+                    <td colspan="2"> <input type="date" name="birthday" required></td>
                 </tr>
                 <tr >
                     <td> Religion</td>
-                    <td colspan="2"> <input type="text" name="religion" ></td>
+                    <td colspan="2"> <input type="text" name="religion" required></td>
                 </tr>
                 <tr >
                     <td> Permanent Address</td>
-                    <td colspan="2"> <input type="text" name="address" ></td>
+                    <td colspan="2"> <input type="text" name="address" required></td>
                 </tr>
                 <tr>
                     <td>
-                        Weight <input type="text" name="weight" >
+                        Weight <input type="text" name="weight" required>
                     </td>
-                    <td colspan='2' > TIN Number <input type="text" name="tin_number" ></td>
-                    <td colspan='2' width="30%"> PAG-IBIG Number <input type="text" name="pagibig_number" ></td>
+                    <td colspan='2' > TIN Number <input type="text" name="tin_number" required ></td>
+                    <td colspan='2' width="30%"> PAG-IBIG Number <input type="text" name="pagibig_number" required></td>
                 </tr>
                 <tr>
                     <td>
-                        Height <input type="text" name="height" >
+                        Height <input type="text" name="height" required>
                     </td>
-                    <td colspan='2' > SSS Number <input type="text" name="sss_number" ></td>
-                    <td colspan='2' width="30%"> PhilHealth Number <input type="text" name="philhealth_number" ></td>
+                    <td colspan='2' > SSS Number <input type="text" name="sss_number" required ></td>
+                    <td colspan='2' width="30%"> PhilHealth Number <input type="text" name="philhealth_number" required ></td>
                 </tr>
                 <tr>
                     <td rowspan="7">
@@ -228,7 +229,7 @@
                         Spouse Name
                     </td>
                     <td colspan="2">
-                         <input type="text" name="spouse_name" >
+                         <input type="text" name="spouse_name" required>
                     </td>
                 </tr>
                 <tr>
@@ -236,7 +237,7 @@
                         Spouse Birthday
                     </td>
                     <td colspan="2">
-                         <input type="text" name="spouse_birthday" >
+                         <input type="text" name="spouse_birthday" required>
                     </td>
                 </tr>
                 <tr>
@@ -244,7 +245,7 @@
                         Spouse Contact Number
                     </td>
                     <td colspan="2">
-                         <input type="text" name="spouse_number" >
+                         <input type="text" name="spouse_number" required>
                     </td>
                 </tr>
                 <tr>
@@ -252,7 +253,7 @@
                         Email Address
                     </td>
                     <td colspan="2">
-                         <input type="text" name="spouse_email" >
+                         <input type="text" name="spouse_email" required>
                     </td>
                 </tr>
                 <tr>
@@ -260,7 +261,7 @@
                         Occupation
                     </td>
                     <td colspan="2">
-                         <input type="text" name="spouse_occupation" >
+                         <input type="text" name="spouse_occupation" required>
                     </td>
                 </tr>
                 <tr>
@@ -268,7 +269,7 @@
                         No. of Children
                     </td>
                     <td colspan="2">
-                         <input type="text" name="children" >
+                         <input type="text" name="children" required>
                     </td>
                 </tr>
 
@@ -278,19 +279,19 @@
                 <tr>
                     <td> Elementary </td>
                     <td colspan='3'>
-                        <input type="text" name="elementary" >
+                        <input type="text" name="elementary" required>
                     </td>
                 </tr>
                 <tr>
                     <td> Address </td>
                     <td colspan='3'>
-                        <input type="text" name="elementary_address" >
+                        <input type="text" name="elementary_address" required>
                     </td>
                 </tr>
                 <tr>
                     <td> Year Graduated </td>
                     <td colspan='3'>
-                        <input type="text" name="elementary_graduate_year" >
+                        <input type="text" name="elementary_graduate_year" required>
                     </td>
                 </tr>
 
@@ -299,19 +300,19 @@
                 <tr>
                     <td> Secondary </td>
                     <td colspan='3'>
-                        <input type="text" name="secondary" >
+                        <input type="text" name="secondary" required>
                     </td>
                 </tr>
                 <tr>
                     <td> Address </td>
                     <td colspan='3'>
-                        <input type="text" name="secondary_address" >
+                        <input type="text" name="secondary_address" required>
                     </td>
                 </tr>
                 <tr>
                     <td> Year Graduated </td>
                     <td colspan='3'>
-                        <input type="text" name="secondary_graduate_year" >
+                        <input type="text" name="secondary_graduate_year" required>
                     </td>
                 </tr>
 
@@ -319,25 +320,25 @@
                  <tr>
                     <td> Tertiary </td>
                     <td colspan='3'>
-                        <input type="text" name="tertiary" >
+                        <input type="text" name="tertiary" required>
                     </td>
                 </tr>
                 <tr>
                     <td> Address </td>
                     <td colspan='3'>
-                        <input type="text" name="tertiary_address" >
+                        <input type="text" name="tertiary_address" required>
                     </td>
                 </tr>
                 <tr>
                     <td> Course </td>
                     <td colspan='3'>
-                        <input type="text" name="course" >
+                        <input type="text" name="course" required>
                     </td>
                 </tr>
                 <tr>
                     <td> Year Graduated </td>
                     <td colspan='3'>
-                        <input type="text" name="tertiary_graduate_year" >
+                        <input type="text" name="tertiary_graduate_year" required>
                     </td>
                 </tr>
 
@@ -347,12 +348,12 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan = '2'> Name <input type="text" name="emergency_name" > </td>
-                    <td colspan = '2'> Address <input type="text" name="emergency_address" > </td>
+                    <td colspan = '2'> Name <input type="text" name="emergency_name" required> </td>
+                    <td colspan = '2'> Address <input type="text" name="emergency_address" required> </td>
                 </tr>
                 <tr>
-                    <td colspan = '2'> Relationship <input type="text" name="emergency_relationship" > </td>
-                    <td colspan = '2'> Contact Number <input type="text" name="emergency_number" > </td>
+                    <td colspan = '2'> Relationship <input type="text" name="emergency_relationship" required> </td>
+                    <td colspan = '2'> Contact Number <input type="text" name="emergency_number" required> </td>
                 </tr>
 
             </table>
@@ -372,6 +373,8 @@
 
 
         <?php 
+
+
         include("../connections.php");
                 $eid = $date_hired = $department = $position = $status = $family_name = $first_name = $middle_name = $contact_number = $email_address = $birthday = $religion = $address 
                 = $weight = $tin_number = $pagibig_number = $height = $sss_number = $philhealth_number = $civil_status = $spouse_name = $spouse_birthday = $spouse_number = $spouse_email
@@ -589,10 +592,24 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                         $errEmail = 'Already registered';
             
                     }else{
-                        $query = mysqli_query($connections, " INSERT INTO emptbl(eid, date_hired, department,position, status, family_name, first_name, middle_name, contact_number, email_address, birthday, religion, address, weight, tin_number, pagibig_number, height, sss_number, philhealth_number, civil_status, spouse_name, spouse_birthday, spouse_number, spouse_email, spouse_occupation, children, elementary, elementary_address, elementary_graduate_year,  secondary,  secondary_address, secondary_graduate_year, tertiary, tertiary_address,  course, tertiary_graduate_year,emergency_name, emergency_address, emergency_relationship, emergency_number )
-                        VALUES('$eid', '$date_hired', '$department','$position', '$status','$family_name', '$first_name', '$middle_name', '$contact_number', '$email_address', '$birthday', '$religion', '$address', '$weight', '$tin_number', '$pagibig_number', '$height', '$sss_number', '$philhealth_number', '$civil_status', '$spouse_name', '$spouse_birthday', '$spouse_number', '$spouse_email', '$spouse_occupation', '$children', '$elementary', '$elementary_address', '$elementary_graduate_year', ' $secondary',  '$secondary_address', '$secondary_graduate_year', '$tertiary', '$tertiary_address',  '$course', '$tertiary_graduate_year','$emergency_name', '$emergency_address', '$emergency_relationship', '$emergency_number')");
-           
-                        echo "<script language=javascript>alert('New record inserted');</script>";
+                        
+                        if(move_uploaded_file($_FILES['img']['tmp_name'], "../photo_folder/".$_FILES['img']['name'])){
+                            $img="../photo_folder/".$_FILES['img']['name'];
+                            $query = mysqli_query($connections, " INSERT INTO emptbl(eid, date_hired, department,position, status, family_name, first_name, middle_name, contact_number, email_address, birthday, religion, address, weight, tin_number, pagibig_number, height, sss_number, philhealth_number, civil_status, spouse_name, spouse_birthday, spouse_number, spouse_email, spouse_occupation, children, elementary, elementary_address, elementary_graduate_year,  secondary,  secondary_address, secondary_graduate_year, tertiary, tertiary_address,  course, tertiary_graduate_year,emergency_name, emergency_address, emergency_relationship, emergency_number, img )
+                            VALUES('$eid', '$date_hired', '$department','$position', '$status','$family_name', '$first_name', '$middle_name', '$contact_number', '$email_address', '$birthday', '$religion', '$address', '$weight', '$tin_number', '$pagibig_number', '$height', '$sss_number', '$philhealth_number', '$civil_status', '$spouse_name', '$spouse_birthday', '$spouse_number', '$spouse_email', '$spouse_occupation', '$children', '$elementary', '$elementary_address', '$elementary_graduate_year', ' $secondary',  '$secondary_address', '$secondary_graduate_year', '$tertiary', '$tertiary_address',  '$course', '$tertiary_graduate_year','$emergency_name', '$emergency_address', '$emergency_relationship', '$emergency_number', '$img)");
+            
+                            echo "<script language=javascript>alert('New record inserted');</script>";
+
+                        }else{
+                            echo "Error uploading file!";
+                        }
+                        
+                     
+                        
+                      
+
+
+                        
                       
                     }
                     
@@ -613,7 +630,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
  
 
     </div>
-
+    <script src='../js/jQuery.js'></script>
     <script>
    var loadFile =  function(event) {
     var output = document.getElementById('output');

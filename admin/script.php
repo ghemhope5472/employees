@@ -236,3 +236,37 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
 
 
+
+
+
+$uploadErr ='';
+        $target_dir = "photo_folder/";
+        $target_file = $target_dir . "/" . basename($_FILES["img"]["name"]);
+        $uploadOk = 1;
+        if(file_exists($target_file)){
+            $target_file = $target_dir .rand(1,9) . rand(1,9) . rand(1,9) . rand(1,9) . "_" . basename($_FILES["img"]["name"]);
+            $uploadOk = 1;
+        }
+        $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+        if($_FILES['[img']['size'] > 500000000000000){
+            $uploadErr = "File too large";
+            $uploadOk = 0;
+        }
+
+        if($imageFileType  != 'jpg' && $imageFileType != 'jpeg' && $imageFileType != 'png' && $imageFileType != 'gif'){
+            $uploadErr = 'Image only';
+            $uploadOk = 0;
+        }
+        if( $uploadOk === 1){
+            if(move_uploaded_file($_FILES['profile_pic']['tmp_name'], $target_file)){
+                
+                // mysqli_query($connections, "UPDATE")
+            }else{
+                echo "Error uploading files";
+            }
+        }
+
+
+
+
+        https://phpcoder.tech/user-login-registration-system-in-php-with-image-upload/
