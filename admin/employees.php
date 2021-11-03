@@ -55,9 +55,9 @@
 
 
         <div class="main">
-            <span class='breadcrumb'> <a href="index.php"> Dashboard </a>/ <a href="employees.php" style='text-decoration:underline;'> Employees </a></span>
+            <span class='breadcrumb'> <a href="index.php"> Dashboard >  </a> <a href="employees.php" style='text-decoration:underline;'> Employees </a></span>
             <br> <br>
-            <h2> Employee </h2>
+            <h2 class="title"> Employee </h2>
             <br> 
             <a href="add_employees.php" class='button-add'> Add Employee </a>  | 
             <a href="list_employees.php" class='button-add'> List of Employee </a>

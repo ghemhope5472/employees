@@ -28,7 +28,7 @@
         <div class="side-nav">
 
             <div class="side-header">
-                <h3>Employee System </h3>
+                <h3 >Employee System </h3>
             </div>
 
             <div class="nav">
@@ -57,7 +57,7 @@
         <div class="main">
         <span class='breadcrumb'> <a href="index.php"> Dashboard </a></span>
             <br> <br>
-            <h2> Dashboard </h2>
+            <h2 class="title"> Dashboard </h2>
         </div>
 
     </div>

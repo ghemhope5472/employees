@@ -54,67 +54,22 @@
         </div>
 
 
-        <?php 
-    // include("connections.php");
-    // $name = $address = $email = $password = $cpassword =  '';
-    // $errName = $errAddress = $errEmail = $errpassword = $errcpassword ='';
-
-    // if($_SERVER["REQUEST_METHOD"] === "POST"){
-    //     if(empty($_POST["name"])){
-    //         $errName = "Name is required "; 
-    //     }else{
-    //         $name = $_POST["name"];
-    //     }
-    //     if(empty($_POST["address"])){
-    //         $errAddress = "Address is required";
-    //     }else{
-    //         $address = $_POST["address"];
-    //     }
-    //     if(empty($_POST["email"])){
-    //         $errEmail = "Email is required";
-    //     }else{
-    //         $email = $_POST["email"];
-    //     }
-    //     if(empty($_POST['password'])){
-    //         $errpassword = "Required";
-    //     }else{
-    //         $password = $_POST['password'];
-    //     }
-    //     if(empty($_POST['cpassword'])){
-    //         $errcpassword = "Required";
-    //     }else{
-    //         $cpassword = $_POST['cpassword'];
-    //     }
-    //     if($name && $address && $email && $password && $cpassword ){
- 
-    //      $check_email = mysqli_query($connections, "SELECT * FROM mytbl WHERE email='$email' ");
-    //      $check_email_row = mysqli_num_rows($check_email);
- 
-    //      if($check_email_row > 0 ){
-    //          $errEmail = 'Already registered';
- 
-    //      }else{
-    //          $query = mysqli_query($connections, " INSERT INTO mytbl(name,address,email,password,account_type)
-    //          VALUES('$name','$address','$email','$password','2')");
-
-    //          echo "<script language=javascript>alert('New record inserted');</script>";
-    //          echo "<script>window.location.href='index.php'</script>";
-    //      }
-         
-        
- 
-    //     }
- 
-    // }
-
-?>
 
 
         <div class="main">
-            <span class='breadcrumb'> <a href="index.php"> Dashboard </a>/ <a href="employees.php" > Employees </a>
-            / <a href="add_employees.php" style='text-decoration:underline;'> Add Employees </a>
+            
+            <span class='breadcrumb'> <a href="index.php"> Dashboard > </a> <a href="employees.php" > Employees ></a>
+             <a href="add_employees.php" style='text-decoration:underline;'> Add Employees </a>
             </span>
             <br> <br>
+            <span class='button-add-tab' style="margin-top: 15px;
+            background-color: #4a8507;
+            padding: 5px 35px;
+            border-radius: 5px;
+            font-size: small;
+            color: floralwhite;"> Add Employee </span> | 
+            <a href="list_employees.php" class='button-add'> List of Employee </a>
+
 
             <table >
                 <tr>
@@ -592,11 +547,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                         $errEmail = 'Already registered';
             
                     }else{
-                        
                         if(move_uploaded_file($_FILES['img']['tmp_name'], "../photo_folder/".$_FILES['img']['name'])){
                             $img="../photo_folder/".$_FILES['img']['name'];
                             $query = mysqli_query($connections, " INSERT INTO emptbl(eid, date_hired, department,position, status, family_name, first_name, middle_name, contact_number, email_address, birthday, religion, address, weight, tin_number, pagibig_number, height, sss_number, philhealth_number, civil_status, spouse_name, spouse_birthday, spouse_number, spouse_email, spouse_occupation, children, elementary, elementary_address, elementary_graduate_year,  secondary,  secondary_address, secondary_graduate_year, tertiary, tertiary_address,  course, tertiary_graduate_year,emergency_name, emergency_address, emergency_relationship, emergency_number, img )
-                            VALUES('$eid', '$date_hired', '$department','$position', '$status','$family_name', '$first_name', '$middle_name', '$contact_number', '$email_address', '$birthday', '$religion', '$address', '$weight', '$tin_number', '$pagibig_number', '$height', '$sss_number', '$philhealth_number', '$civil_status', '$spouse_name', '$spouse_birthday', '$spouse_number', '$spouse_email', '$spouse_occupation', '$children', '$elementary', '$elementary_address', '$elementary_graduate_year', ' $secondary',  '$secondary_address', '$secondary_graduate_year', '$tertiary', '$tertiary_address',  '$course', '$tertiary_graduate_year','$emergency_name', '$emergency_address', '$emergency_relationship', '$emergency_number', '$img)");
+                            VALUES('$eid', '$date_hired', '$department','$position', '$status','$family_name', '$first_name', '$middle_name', '$contact_number', '$email_address', '$birthday', '$religion', '$address', '$weight', '$tin_number', '$pagibig_number', '$height', '$sss_number', '$philhealth_number', '$civil_status', '$spouse_name', '$spouse_birthday', '$spouse_number', '$spouse_email', '$spouse_occupation', '$children', '$elementary', '$elementary_address', '$elementary_graduate_year', ' $secondary',  '$secondary_address', '$secondary_graduate_year', '$tertiary', '$tertiary_address',  '$course', '$tertiary_graduate_year','$emergency_name', '$emergency_address', '$emergency_relationship', '$emergency_number', '$img')");
             
                             echo "<script language=javascript>alert('New record inserted');</script>";
 
