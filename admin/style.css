@@ -21,6 +21,9 @@
   width: 20%;
   color: #282A35;
 }
+.side-nav::-webkit-scrollbar {
+  display: none;
+}
 .main {
   background-color: #282A35;
   width: 80%;
