@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-
+  font-weight: 700;
 }
 
 .container {
@@ -19,17 +19,16 @@
   background-color: #f8f9fa;
   overflow: auto;
   width: 20%;
-  color: #282A35;
+  color: #282a35;
 }
 .side-nav::-webkit-scrollbar {
   display: none;
 }
 .main {
-  background-color: #282A35;
+  background-color: #282a35;
   width: 80%;
   height: 100vh;
   overflow: auto;
-  
 }
 
 .side-nav {
@@ -75,14 +74,13 @@
 a {
   text-decoration: none;
   color: #1d2138;
- 
 }
 
 .main {
   padding: 5rem;
   color: #1d2138;
 }
-.main > a{
+.main > a {
   color: floralwhite;
 }
 
@@ -128,12 +126,15 @@ td {
   border: 1px solid black;
   padding: 5px;
   font-size: small;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 2px solid rgb(187, 183, 183);
 }
 table {
   width: 100%;
   border-collapse: collapse;
+  box-shadow: 1px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 0px 14px 0px rgba(0, 0, 0, 0.75);
 }
 
 input[type="text"],
@@ -150,9 +151,15 @@ input[type="date"] {
   background-color: #4a8507;
   cursor: pointer;
   padding: 5px 35px;
-  border-radius: 5px;
+  border-radius: 25px;
   font-size: larger;
   color: floralwhite;
+}
+
+.button-submit:hover {
+  background-color: #71ad2c;
+  font-weight: 800;
+  color: rgb(2, 36, 19);
 }
 
 .button-add:hover {
@@ -165,8 +172,7 @@ input[type="date"] {
   color: floralwhite;
 }
 
-
-.btn-info{
+.btn-info {
   margin-top: 15px;
   background-color: #07857f;
   padding: 5px 15px;
@@ -175,7 +181,7 @@ input[type="date"] {
   color: floralwhite;
 }
 
-.btn-delete{
+.btn-delete {
   margin-top: 15px;
   background-color: #ce2d17;
   padding: 5px 15px;
@@ -183,14 +189,22 @@ input[type="date"] {
   font-size: small;
   color: floralwhite;
 }
-
-.info_space{
-  margin-right: 50px;
-  width: 300px;
- 
+.btn-edit {
+  margin-top: 15px;
+  background-color: #318b29;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: small;
+  color: floralwhite;
 }
 
-.title, .breadcrumb > a{
+.info_space {
+  margin-right: 50px;
+  width: 300px;
+}
+
+.title,
+.breadcrumb > a {
   color: floralwhite;
 }
 
