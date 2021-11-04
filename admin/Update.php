@@ -1,4 +1,23 @@
+
+   <?php
+        session_start();
+        if(isset($_SESSION['id'])){
+            $user_id = $_SESSION['id'];
+            include("../connections.php");
+
+            $get_record = mysqli_query($connections, "SELECT * FROM mytbl WHERE id='$user_id' ");
+            while($row_edit = mysqli_fetch_assoc($get_record)){
+                $db_username = $row_edit["username"];
+            }          
+          }else{
+            echo "You must login first! <a href='../login.php>Login now</a>";
+        }
+?>
+
+
 <?php
+
+
 
     include("../connections.php");
     $emp_id = $_POST['emp_id'];
@@ -97,10 +116,16 @@
     
     WHERE id='$emp_id'");
 
+    date_default_timezone_set('Asia/Manila');
+    $date = date('m/d/Y h:i:s a', time());
+
+    $sql = "INSERT INTO logs (user,action,time)VALUES('$db_username','Edit Employee: $family_name','$date')";
+    $result = mysqli_query($connections, $sql);
 
 
-echo "<script language='javascript'>alert('Record has been updated')</script>";
-echo "<script>window.location.href='View.php?id=$emp_id';</script>";
+
+    echo "<script language='javascript'>alert('Record has been updated')</script>";
+    echo "<script>window.location.href='View.php?id=$emp_id';</script>";
 
 
 

@@ -552,6 +552,13 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                             $query = mysqli_query($connections, " INSERT INTO emptbl(eid, date_hired, department,position, status, family_name, first_name, middle_name, contact_number, email_address, birthday, religion, address, weight, tin_number, pagibig_number, height, sss_number, philhealth_number, civil_status, spouse_name, spouse_birthday, spouse_number, spouse_email, spouse_occupation, children, elementary, elementary_address, elementary_graduate_year,  secondary,  secondary_address, secondary_graduate_year, tertiary, tertiary_address,  course, tertiary_graduate_year,emergency_name, emergency_address, emergency_relationship, emergency_number, img )
                             VALUES('$eid', '$date_hired', '$department','$position', '$status','$family_name', '$first_name', '$middle_name', '$contact_number', '$email_address', '$birthday', '$religion', '$address', '$weight', '$tin_number', '$pagibig_number', '$height', '$sss_number', '$philhealth_number', '$civil_status', '$spouse_name', '$spouse_birthday', '$spouse_number', '$spouse_email', '$spouse_occupation', '$children', '$elementary', '$elementary_address', '$elementary_graduate_year', ' $secondary',  '$secondary_address', '$secondary_graduate_year', '$tertiary', '$tertiary_address',  '$course', '$tertiary_graduate_year','$emergency_name', '$emergency_address', '$emergency_relationship', '$emergency_number', '$img')");
             
+
+                            date_default_timezone_set('Asia/Manila');
+                            $date = date('m/d/Y h:i:s a', time());
+
+                            $sql = "INSERT INTO logs (user,action,time)VALUES('$db_username','Add Employee: $family_name','$date')";
+                            $result = mysqli_query($connections, $sql);
+
                             echo "<script language=javascript>alert('New record inserted');</script>";
 
                         }else{

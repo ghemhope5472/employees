@@ -45,6 +45,12 @@
                             session_start();
                             $_SESSION['id'] = $user_id;
                             if( $db_account_type == 1){
+                                date_default_timezone_set('Asia/Manila');
+                                $date = date('m/d/Y h:i:s a', time());
+
+                                $sql = "INSERT INTO logs (user,action,time)VALUES('$db_username','Login in','$date')";
+                                $result = mysqli_query($connections, $sql);
+                    
                                 echo "<script>window.location.href='admin';</script>";
                             }else{
                                 echo "<script>window.location.href='user';</script>";

@@ -116,7 +116,7 @@
         <div class="main">
 
         <span class='breadcrumb'> <a href="index.php"> Dashboard ></a> <a href="employees.php" > Employees ></a> 
-             <a href="list_employees.php" > List of Employee > </a> <a href="" style='text-decoration:underline;'> View ></a>
+             <a href="list_employees.php" > List of Employee > </a> <a href="" style='text-decoration:underline;'> Edit ></a>
             </span>
             <br> <br>
          

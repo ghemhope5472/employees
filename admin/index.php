@@ -44,7 +44,7 @@
             
 
                <div class="item" style='margin-top:20rem;'> Logged in as -  <?php  echo $db_username; ?> </div>
-               <a href="#">
+               <a href="logout.php">
                <div class="item" ><img src="../icons/logout.png" alt="icon" class='icon' width='30px' style='margin-right: 2rem;'> Logout  </div>
                </a>
             </div>

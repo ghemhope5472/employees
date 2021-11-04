@@ -67,7 +67,26 @@
 
         $emp_id = $_POST['emp_id'];
 
+
+        $query_edit = mysqli_query($connections, "SELECT * FROM emptbl WHERE id='$emp_id'");
+
+        while($row_edit = mysqli_fetch_assoc($query_edit)){
+            
+      
+            $family_name = $row_edit['family_name'];
+          
+      
+          
+
+        }
+
         mysqli_query($connections, "DELETE FROM emptbl WHERE id='$emp_id'");
+
+        date_default_timezone_set('Asia/Manila');
+        $date = date('m/d/Y h:i:s a', time());
+    
+        $sql = "INSERT INTO logs (user,action,time)VALUES('$db_username','Delete Employee: $family_name','$date')";
+        $result = mysqli_query($connections, $sql);
 
         echo "<script language='javascript'> alert('User deleted');</script>";
         echo "<script> window.location.href='list_employees.php'</script>";
