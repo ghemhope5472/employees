@@ -241,7 +241,7 @@
                         Email Address
                     </td>
                     <td colspan="2">
-                         <input type="text" name="spouse_email" value='<?php echo $email_address; ?>' readonly>
+                         <input type="text" name="spouse_email" value='<?php echo $spouse_email; ?>' readonly>
                     </td>
                 </tr>
                 <tr>

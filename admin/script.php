@@ -270,3 +270,52 @@ $uploadErr ='';
 
 
         https://phpcoder.tech/user-login-registration-system-in-php-with-image-upload/
+
+
+
+
+
+        mysqli_query($connections, 
+    "UPDATE emptbl SET 
+    eid ='$new_eid', 
+    date_hired ='$date_hired', 
+    department ='$department', 
+    position = '$position',
+    status = '$status',
+    family_name = '$family_name', 
+    first_name ='$first_name', 
+    middle_name = '$middle_name', 
+    contact_number = '$contact_number' 
+    email_address = '$email_address', 
+    birthday = '$birthday', 
+    religion = '$religion', 
+    address = '$address', 
+    weight = '$weight', 
+    tin_number = '$tin_number', 
+    pagibig_number='$pagibig_number', 
+    height='$height', 
+    sss_number='$sss_number', 
+    philhealth_number='$philhealth_number', 
+    civil_status='$civil_status', 
+    spouse_name='$spouse_name',
+    spouse_birthday='$spouse_birthday', 
+    spouse_number='$spouse_number', 
+    spouse_email='$spouse_email',  
+    spouse_occupation='$spouse_occupation', 
+    children='$children', 
+    elementary='$elementary', 
+    elementary_address='$elementary_address', 
+    elementary_graduate_year='$elementary_graduate_year', 
+    secondary='$secondary',  
+    secondary_address='$secondary_address', 
+    secondary_graduate_year='$secondary_graduate_year',  
+    tertiary='$tertiary', 
+    tertiary_address='$tertiary_address',  
+    course='$course',  
+    tertiary_graduate_year='$tertiary_graduate_year',  
+    emergency_name='$emergency_name', 
+    emergency_address='$emergency_address', 
+    emergency_relationship='$emergency_relationship', 
+    emergency_number='$emergency_number', 
+    img = '$img',
+    WHERE id='$emp_id'");
