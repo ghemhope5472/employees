@@ -40,7 +40,7 @@
                <a href="index.php" >
                <div class="item"><img src="../icons/presentation.png" alt="icon" class='icon' width='30px' style='margin-right: 2rem;'> Dashboard </div>
                </a>
-               <a href="employees.php">
+               <a href="list_employees.php">
                <div class="item active"><img src="../icons/portfolio.png" alt="icon" class='icon' width='30px' style='margin-right: 2rem;'> Employees </div>
                </a>
                <a href="logs.php">

@@ -3,14 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <title> Employee Information </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/responsive-style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <div class="container">
+    <header>    
+        <div class="menuDiv" onclick="menuShow(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+      
+        <p> Employees Information System </p>
+      
+    </header>
 
 
-    <?php
+
+    <nav id="nav">
+
+        <!-- SCRIPT -->
+        <?php
         session_start();
         if(isset($_SESSION['id'])){
             $user_id = $_SESSION['id'];
@@ -23,43 +38,34 @@
         }else{
             echo "You must login first! <a href='../login.php>Login now</a>";
         }
-?>
+        ?>
 
-        <div class="side-nav">
+        <?php
+            include('side-nav.php');
+        ?>
 
-            <div class="side-header">
-                <h3 >Employee System </h3>
-            </div>
+    <!-- SCRIPT -->
+       
+    </nav>
 
-            <div class="nav">
-               <a href="index.php" >
-               <div class="item active"><img src="../icons/presentation.png" alt="icon" class='icon' width='30px' style='margin-right: 2rem;'> Dashboard </div>
-               </a>
-               <a href="employees.php">
-               <div class="item"><img src="../icons/portfolio.png" alt="icon" class='icon' width='30px' style='margin-right: 2rem;'> Employees </div>
-               </a>
-               <a href="logs.php">
-               <div class="item" style='margin-bottom:2rem;'><img src="../icons/folder.png" alt="icon" class='icon' width='30px' style='margin-right: 2rem;'> Logs </div>
-               </a>
-            
+    <div id="main">
+        <h1> Dashboard </h1>
+        <hr>
 
-               <div class="item" style='margin-top:20rem;'> Logged in as -  <?php  echo $db_username; ?> </div>
-               <a href="logout.php">
-               <div class="item" ><img src="../icons/logout.png" alt="icon" class='icon' width='30px' style='margin-right: 2rem;'> Logout  </div>
-               </a>
-            </div>
-
-          
-
+        <div class="info-wrapper">
+                <div class="info-box">
+                   <h3 style="color: floralwhite;margin-top:10px;"> Employees Count </h3>
+                            <h1>45</h1>
+                </div>
+                <div class="info-box">
+                <h3 style="color: floralwhite;margin-top:10px;"> Employees Count </h3>
+                            <h1>45</h1>
+                </div>
         </div>
-
-
-        <div class="main">
-        <span class='breadcrumb'> <a href="index.php"> Dashboard </a></span>
-            <br> <br>
-            <h2 class="title"> Dashboard </h2>
-        </div>
-
     </div>
+
+    
+
+    <script src="js/responsive.js"></script>
 </body>
 </html>

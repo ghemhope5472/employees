@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" ref='css/responsive.css'>
 </head>
 <body>
     <div class="container">
@@ -23,7 +24,7 @@
           }else{
             echo "You must login first! <a href='../login.php>Login now</a>";
         }
-?>
+    ?>
 
         <div class="side-nav">
 
@@ -35,7 +36,7 @@
                <a href="index.php" >
                <div class="item"><img src="../icons/presentation.png" alt="icon" class='icon' width='30px' style='margin-right: 2rem;'> Dashboard </div>
                </a>
-               <a href="employees.php">
+               <a href="list_employees.php">
                <div class="item active"><img src="../icons/portfolio.png" alt="icon" class='icon' width='30px' style='margin-right: 2rem;'> Employees </div>
                </a>
                <a href="logs.php">
@@ -53,7 +54,7 @@
 
         </div>
 
-
+       
 
 
         <div class="main">

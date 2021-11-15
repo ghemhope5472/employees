@@ -319,3 +319,8 @@ $uploadErr ='';
     emergency_number='$emergency_number', 
     img = '$img',
     WHERE id='$emp_id'");
+
+
+
+
+    https://www.sourcecodester.com/tutorials/php/12362/php-how-print-document.html

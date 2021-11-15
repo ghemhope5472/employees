@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+    integrity="sha256-c9vxcXyAG4paArQG3xk6DjyW/9aHxai2ef9RpMWO44A=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+
 </head>
 <body>
     <div class="container">
@@ -94,7 +99,7 @@
                <a href="index.php" >
                <div class="item"><img src="../icons/presentation.png" alt="icon" class='icon' width='30px' style='margin-right: 2rem;'> Dashboard </div>
                </a>
-               <a href="employees.php">
+               <a href="list_employees.php">
                <div class="item active"><img src="../icons/portfolio.png" alt="icon" class='icon' width='30px' style='margin-right: 2rem;'> Employees </div>
                </a>
                <a href="logs.php">
@@ -113,14 +118,18 @@
         </div>
 
 
+
+
+
         <div class="main">
+        
 
         <span class='breadcrumb'> <a href="index.php"> Dashboard ></a> <a href="employees.php" > Employees ></a> 
              <a href="list_employees.php" > List of Employee > </a> <a href="" style='text-decoration:underline;'> View ></a>
             </span>
             <br> <br>
          
-        <table >
+        <table>
                 <tr>
                     <td style='text-align:center;font-weight:bold;background-color: #4a8507;color:floralwhite;' colspan="4">EMPLOYEE INFO</td>
                 </tr>
@@ -128,6 +137,9 @@
                
                 <form action="<?php htmlspecialchars('PHP_SELF'); ?>" method="POST" enctype="multipart/form-data">
                 <!--    FORM START -->
+                
+
+               
                 <tr>
                     <td colspan='5'>
                         EIDN:  <input type="text" name="eid" value='<?php echo $eid; ?>' readonly> 
@@ -158,7 +170,8 @@
                    
                 </tr>
                 <tr>
-                <a href='Edit.php?id=<?php echo $emp_id;  ?>' class='btn-edit' >Edit this employee </a> | 
+                <a href='Edit.php?id=<?php echo $emp_id;  ?>' class='btn-edit' style='background-color: #4a8507;'>Edit this employee </a> |  
+                <a href='testprint.php?id=<?php echo $emp_id;  ?>' class='btn-edit' style='background-color: #4a8507;'> Generate PDF </a> |  
                 </tr>
                 <tr colspan="3">
                     <td> Family Name </td>
@@ -348,10 +361,43 @@
                 </tr>
 
             </table>
-
+           
+            </div><!--    CONTENT2 DIV END -->
+       
+ 
        
         </div>
 
+ 
+        <button class="btn btn-info" id="downloadPDF">Download PDF</button>
+        
+
     </div>
+  
+   
+    <script>
+    /*
+$('#cmd2').click(function() {
+  	var options = {
+		//'width': 800,
+  	};
+  	var pdf = new jsPDF('p', 'pt', 'a4');
+  	pdf.addHTML($("#content2"), -1, 220, options, function() {
+    	pdf.save('admit_card.pdf');
+  	});
+});
+*/
+$('#downloadPDF').click(function () {
+    domtoimage.toPng(document.getElementById('content2'))
+        .then(function (blob) {
+            var pdf = new jsPDF('l', 'pt', [$('#content2').width(), $('#content2').height()]);
+
+            pdf.addImage(blob, 'PNG', 0, 0, $('#content2').width(), $('#content2').height());
+            pdf.save("test.pdf");
+
+            that.options.api.optionsChanged();
+        });
+});
+</script>
 </body>
 </html>
