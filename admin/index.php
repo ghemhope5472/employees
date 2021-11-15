@@ -10,11 +10,24 @@
 </head>
 <body>
     <header>    
-        <div class="menuDiv" onclick="menuShow(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+        <div class="desktop" >
+            <div class="menuDiv" onclick="menuShow(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </div>
+
+
+        <div class="mobile" >
+            <div class="menuDiv" onclick="menuShow2(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>    
+                <div class="bar3"></div>
+            </div>
+        </div>
+
+
       
         <p> Employees Information System </p>
       

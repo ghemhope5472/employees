@@ -252,6 +252,33 @@ a {
     align-items: center;
 }
 
+.mobile{
+    background-color: lightsalmon;
+    display: none;
+}
+
+
+.bar1, .bar2, .bar3{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+
+}
+
+.change .bar2{
+    opacity: 0;
+}
+
+.change .bar1{
+    transform: rotate(-45deg) translate(-10px, 8px);
+}
+
+.change .bar3{
+    transform: rotate(45deg) translate(-7px, -7px);
+}
+
 @media only screen and (max-width:768px) {
     .info-wrapper{
         flex-direction: column;
@@ -266,6 +293,17 @@ a {
         height: 300px;
         width: 100%;
         margin: 10px 0;
+        
     }
+    .nav{
+        width: 350px;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+   
 }
 

@@ -29,3 +29,12 @@ function menuShow(x){
             navSide.style.width = "350px";
         }
 }
+
+function menuShow2(x){
+    x.classList.toggle('change');
+}
+
+
+
+
+
