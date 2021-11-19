@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#top-nav{
+   background-color: crimson;
+    z-index: 99;
+    position: fixed;
+    width: 100vw;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.side-nav{
+    padding-top: 3rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(229, 238, 238);
+    height: 100%;
+    width: 200px;
+    overflow: auto;
+    transition: 0.2s ease-in;
+    transition-timing-function: linear;
+}
+
+#content{
+    height: 100vh;
+    overflow: auto;
+
+}
+
+main{
+    color: white;
+    padding-left: 220px;
+}
+.mobile-view{
+    display: none;
+}
+
+#content{
+    padding-top: 3rem;
+    padding-right: 3rem;
+}
+
+
+.content-active{
+    padding-left: 10px;
+}
+
+.sidenav-active{
+    margin-left: -300px;
+}
+
+
+
+@media only screen and (max-width:768px){
+    .side-nav{
+        /* display: none; */
+        margin-left: -300px;
+        /* position: fixed; */
+    }
+    main{
+        padding-left: 10px;
+    }
+    .desktop-view{
+        display: none;
+    }
+    .mobile-view{
+        display: block;
+    }
+    #top-nav{
+        background-color: crimson;
+        z-index: 99;
+        position: fixed;
+        width: 100vw;
+        height: 3rem;
+        display: block;
+    }
+    .logout-btn{
+        display: none;
+    }
+
+}
+
+.logout-btn{
+    height: 100%;
+}
+
+
+.mobile-active{
+    background-color: turquoise;
+    margin-left: -300px;
+}
+
+.btn-desktop{
+    margin: 7px;
+    width: 55px;
+    height: 35px;
+    background-color: rgb(245, 236, 236);
+    cursor: pointer;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+
+.menu-img{
+    margin-left: 9px;
+}
+
+.logo-img{
+    margin-left: 15px;
+}
+
+.logout-btn button{
+    height: 100%;
+}
+
+ul li{
+    
+    list-style-type: none;
+}
+.links ul li{
+    background-color: crimson;
+    margin-top: 2rem;
+    padding: 10px 35px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+ul li a:hover{
+    text-decoration: none;
+    color: whitesmoke;
+   
+}
+
+
+ul li:hover{
+    text-decoration: none;
+    background-color: rgb(202, 16, 53);
+}
+
+
+#example{
+    background-color: rgb(175, 6, 40);
+}
+
+.lead{
+    font-size: small;
+}
+
+.link-img{
+    margin-right: 10px;
+}
+
+.card-body{
+    color: gray;
+}
+

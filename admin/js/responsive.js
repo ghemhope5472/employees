@@ -1,40 +1,16 @@
+var contentDiv = document.getElementById('content');
+var sideNav = document.getElementById('side-nav');
 
-const menuBtn  = document.querySelector("#menu")
 
 
-
-// menuBtn.addEventListener("click", function(){
-//     // navSide.style.backgroundColor = 'red';
-//     let navSide = document.getElementById('nav')
-//     if(navSide.style.width == "300px"){
-//         navSide.style.width = "0px";
-//     }else{
-//         navSide.style.width = "300px";
-//     }
-// })
-
-// function navChange(){
-//     document.navSide.style.backgroundColor = "red";
-// }
-
-function menuShow(x){
-    x.classList.toggle('change');
-    let navSide = document.getElementById('nav')
-    let sideNav = document.getElementById('side-nav')
-
-       
-        if(navSide.style.width == "350px"){
-            navSide.style.width = "0px";
-        }else{
-            navSide.style.width = "350px";
-        }
+function showMenu(){
+    contentDiv.classList.toggle('content-active')
+    sideNav.classList.toggle('sidenav-active')
+    
 }
 
-function menuShow2(x){
-    x.classList.toggle('change');
-}
+function mobileView(){
 
-
-
-
-
+    sideNav.classList.toggle('mobile-active');
+    console.log('cecel')
+}   

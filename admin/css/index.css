@@ -26,7 +26,7 @@ header{
     box-shadow: 2px 0 4px rgba(10,10,10,0.5);
 }
 header .menuDiv{
-    margin: auto 15px;
+    margin-right: 0;
 }
 
 .menuDiv{

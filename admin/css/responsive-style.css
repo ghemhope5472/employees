@@ -30,7 +30,7 @@ header .menuDiv{
 }
 
 .menuDiv{
-    background-color: #4283EC;
+   
     cursor: pointer;
     padding: 0 5px;
     border-radius: 25px;
@@ -252,10 +252,7 @@ a {
     align-items: center;
 }
 
-.mobile{
-    background-color: lightsalmon;
-    display: none;
-}
+
 
 
 .bar1, .bar2, .bar3{
@@ -295,15 +292,14 @@ a {
         margin: 10px 0;
         
     }
-    .nav{
-        width: 350px;
+    #nav{
+        color: red;
+        /* width: 350px; */
     }
-    .desktop{
-        display: none;
+    #desktop-menu{
+      display: none;
     }
-    .mobile{
-        display: block;
-    }
+   
    
 }
 
